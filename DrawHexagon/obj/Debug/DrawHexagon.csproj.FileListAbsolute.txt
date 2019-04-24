@@ -1,0 +1,5 @@
+A:\Github\DrawHexagon\DrawHexagon\bin\Debug\DrawHexagon.dll
+A:\Github\DrawHexagon\DrawHexagon\bin\Debug\DrawHexagon.pdb
+A:\Github\DrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.dll
+A:\Github\DrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.pdb
+A:\Github\DrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.csprojResolveAssemblyReference.cache
