@@ -24,20 +24,17 @@ namespace DrawHexagon
         {
             Database db = Active.Database;
             Hexagon coord = new Hexagon();
-            List<PointF[]> arr = coord.DrawHexGrid(0, 100, 0, 100, 5);
+            List<PointF> list = coord.DrawHexGrid(0, 100, 0, 100, 5);
             Point3dCollection p3 = new Point3dCollection();
 
             try
             {
-                foreach (PointF[] hexa in arr)
+                foreach (PointF pt in list)
                 {
-                    foreach (PointF pt in hexa)
-                    {
-                        p3.Add(new Point3d(pt.X, pt.Y, 0));
-                    }
+                    p3.Add(new Point3d(pt.X, pt.Y, 0));
                 }
-                
-                
+
+
 
 
                 using (Transaction acTrans = db.TransactionManager.StartTransaction())

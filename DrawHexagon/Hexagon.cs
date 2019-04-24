@@ -51,12 +51,13 @@ namespace DrawHexagon
         // Draw a hexagonal grid for the indicated area.
         // (You might be able to draw the hexagons without
         // drawing any duplicate edges, but this is a lot easier.)
-        public List<PointF[]> DrawHexGrid(float xmin, float xmax, float ymin, float ymax, float height)
+        public List<PointF> DrawHexGrid(float xmin, float xmax, float ymin, float ymax, float height)
         {
-            List<PointF[]> result = new List<PointF[]>();
-           
+            List<PointF> result = new List<PointF>();
+            //float[,] result = new float[,] { };
+
             // Loop until a hexagon won't fit.
-            for (int row = 0;  ; row++)
+            for (int row = 0; ; row++)
             {
                 //// Get the points for the row's first hexagon.
                 PointF[] points = HexToPoints(height, row, 0);
@@ -76,26 +77,40 @@ namespace DrawHexagon
                         // we're done with this row.
                         if (points[3].X > xmax) break;
 
-                        result.Add(points);
+                        foreach (PointF p in points)
+                        {
+                            result.Add(new PointF(p.X, p.Y));
+                        };
                     }
                 }
+
             }
             return RemoveDuplicates(result);
         }
+               
 
-        private List<PointF[]> RemoveDuplicates(List<PointF[]> points)
+
+        private List<PointF> RemoveDuplicates(List<PointF> points)
         {
-            for (int i = 0; i < points.Count; i++)
-            {
-                int index = 0;
+            int index = 0;
 
-                while (index < points.Count - 1)
+            for (int i = 0; i < points.Count; i++)
+            {   
+                foreach(PointF x in points)
                 {
-                    if (points[i].SequenceEqual(points[index + 1]))
-                        points.RemoveAt(i);
-                    else
-                        index++;
+
                 }
+                if (points[index].Equals(points[i]))
+                {
+                    
+                    //points.RemoveAt(i);
+                }
+                else
+                {
+
+                }
+
+                    
             }
 
             return points;
