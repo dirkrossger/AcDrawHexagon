@@ -83,37 +83,31 @@ namespace DrawHexagon
                         };
                     }
                 }
-
             }
+
             return RemoveDuplicates(result);
         }
-               
-
 
         private List<PointF> RemoveDuplicates(List<PointF> points)
         {
-            int index = 0;
+            List<PointF> list = new List<PointF>();
+            var request = points
+                .Where(n1 => points.Where(n2 => n1.X == n2.X).Select(n3 => new { n1.X, n1.Y})
+                .Where(n4 => points.Where(n5 => n4.Y == n5.Y).Select(n6 => new { n4.X, n4.Y })
+            //var request = 
+            //    points.Where(x 
+            //    => points.Where(y => x.X == y.X)
+            //    .Select(z => z.Y == x.Y).Select(n1 => new { x.X, x.Y})
 
-            for (int i = 0; i < points.Count; i++)
-            {   
-                foreach(PointF x in points)
-                {
-
-                }
-                if (points[index].Equals(points[i]))
-                {
-                    
-                    //points.RemoveAt(i);
-                }
-                else
-                {
-
-                }
-
-                    
-            }
-
-            return points;
+                //for (var z = 0; z < points.Count; z++)
+                //{
+                //    var item = (from x in points
+                //                 where x.X == points[z].X
+                //                 where x.Y == points[z].Y
+                //                 select x).First();
+                //    result.Add(new PointF(item.X, item.Y));
+                //}
+            return list;
         }
     }
 }
