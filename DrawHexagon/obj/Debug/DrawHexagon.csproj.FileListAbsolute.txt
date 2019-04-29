@@ -4,11 +4,5 @@ A:\Github\DrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.dll
 A:\Github\DrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.pdb
 c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\DrawHexagon.dll
 c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\DrawHexagon.pdb
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\accoremgd.dll
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\acdbmgd.dll
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\acmgd.dll
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\AdWindows.dll
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\bin\Debug\AcWindows.dll
-c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.csprojResolveAssemblyReference.cache
 c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.dll
 c:\Users\Dick\Documents\GitExt_projects\AcDrawHexagon\DrawHexagon\obj\Debug\DrawHexagon.pdb
