@@ -13,3 +13,6 @@ https://stackoverflow.com/questions/18547354/c-sharp-linq-find-duplicates-in-lis
 - Remove duplicate PointF(x, y) coordinates 
   -> remove coordinates exactly equal (all decimals)
   -> https://www.dotnetperls.com/duplicates
+
+- Draw Circles
+	-> http://csharphelper.com/blog/2016/11/circumscribe-three-tangent-circles-in-c/

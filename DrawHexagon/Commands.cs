@@ -24,12 +24,12 @@ namespace DrawHexagon
         {
             Database db = Active.Database;
             Hexagon coord = new Hexagon();
-            List<PointF> list = coord.DrawHexGrid(0, 100, 0, 100, 5);
+            List<Midpoint> list = coord.DrawHexGrid(0, 100, 0, 100, 5);
             Point3dCollection p3 = new Point3dCollection();
 
             try
             {
-                foreach (PointF pt in list)
+                foreach (Midpoint pt in list)
                 {
                     p3.Add(new Point3d(pt.X, pt.Y, 0));
                 }

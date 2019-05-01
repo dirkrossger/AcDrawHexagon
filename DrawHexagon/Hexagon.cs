@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace DrawHexagon
 {
-
-    /// <summary>
-    /// http://csharphelper.com/blog/2015/10/draw-a-hexagonal-grid-in-c/
-    /// </summary>
     class Hexagon
     {
         // Return the points that define the indicated hexagon.
@@ -122,14 +118,3 @@ class ItemEqualityComparer : IEqualityComparer<PointF>
 }
 
 
-internal class PointF
-{
-    public float X;
-    public float Y;
-
-    public PointF(float x, float y)
-    {
-        this.X = x;
-        this.Y = y;
-    }
-}
