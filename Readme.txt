@@ -12,3 +12,4 @@ https://stackoverflow.com/questions/18547354/c-sharp-linq-find-duplicates-in-lis
 2019-05-01
 - Remove duplicate PointF(x, y) coordinates 
   -> remove coordinates exactly equal (all decimals)
+  -> https://www.dotnetperls.com/duplicates
