@@ -91,28 +91,36 @@ namespace DrawHexagon
         private List<PointF> RemoveDuplicates(List<PointF> points)
         {
             List<PointF> list = new List<PointF>();
-            
-            var queryX = points.GroupBy(x => x.X)
-              .Where(g => g.Count() > 1)
-              .Select(y => new { Element = y.Key, Counter = y.Count() })
-              .ToList();
 
-            foreach (var x in queryX)
-                list.Add(points.ElementAt(x.Counter));
+            var query = points.Distinct(new ItemEqualityComparer());
 
-            var queryY = list.GroupBy(x => x.Y)
-              .Where(g => g.Count() > 1)
-              .Select(y => new { Element = y.Key, Counter = y.Count() })
-              .ToList();
-            list.Clear();
-
-            foreach (var x in queryY)
-                list.Add(points.ElementAt(x.Counter));
-
+            foreach (var element in query)
+            {
+                list.Add(new PointF(element.X, element.Y));
+            }
             return list;
         }
     }
 }
+
+
+class ItemEqualityComparer : IEqualityComparer<PointF>
+{
+    public bool Equals(PointF x, PointF y)
+    {
+        // Two items are equal if their keys are equal.
+        if (x.X == y.X && x.Y == y.Y)
+            return true;
+        else
+            return false;
+    }
+
+    public int GetHashCode(PointF obj)
+    {
+        return obj.X.GetHashCode();
+    }
+}
+
 
 internal class PointF
 {

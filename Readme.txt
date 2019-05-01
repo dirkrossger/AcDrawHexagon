@@ -8,3 +8,7 @@ Look for duplicate coordinates
 https://stackoverflow.com/questions/18547354/c-sharp-linq-find-duplicates-in-list
 - test queryX = points.GroupBy(x => x.X)
 - test  queryY = points.GroupBy(x => x.Y)
+
+2019-05-01
+- Remove duplicate PointF(x, y) coordinates 
+  -> remove coordinates exactly equal (all decimals)
